@@ -1,0 +1,34 @@
+<table class="table table-borderless">
+<thead class="thead-light">
+    <th>
+        <a class="btn btn-sm btn-success text-white"><i class="fa fa-plus"></i>Add Product</a>
+        
+    </th>
+    <th>
+        <a class="btn btn-sm btn-success text-white"><i class="fa fa-minus" aria-hidden="true"></i>Delete Product</a>
+    </th>
+    <th>
+        <a class="btn btn-sm btn-success text-white"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Edit Product</a>
+    </th>
+    <th>
+        <a class="btn btn-sm btn-success text-white"><i class="fa fa-sort" aria-hidden="true"></i>List Products</a>
+    </th>
+    <th>
+        <a class="btn btn-sm btn-success text-white"><i class="fa fa-search-minus" aria-hidden="true"></i>Search Products</a>
+    </th>
+</thead>
+<tbody>
+    <tr *ngIf="productModel.length==0">
+        <td class="text-center">
+        Product Not Found!
+        </td>
+        </tr>
+    <tr *ngfor="let item off productModel;let i= index;">
+        <td>{{item.Item.ItemTitle}}</td>
+        <td>{{item.Item.ItemStoke}}</td>
+        <td>{{item.Item.ItemPrice}}</td>
+        
+    </tr>
+</tbody>
+
+</table>
